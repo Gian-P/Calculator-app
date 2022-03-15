@@ -7,29 +7,28 @@
   color: var(--white-color);
   font-size: 1.2rem;
   align-self: flex-end;
-  padding-left: 97px;
+  padding-left: 9.7rem;
 }
 
 .theme-toogle{
-  background-color: red;
-  width: 75px;
-  height: 25px;
-  border-radius: 30px;
+  width: 7.5rem;
+  height: 2.5rem;
+  border-radius: 3rem;
   background-color: var(--theme-BC);
   align-self: flex-end;
   position: relative;
-  top: 4px;
+  top: 0.4rem;
 }
 
 .theme-sections{
   display: flex;
   position: relative;
-  bottom: 20px;
-  gap: 17px;
-  left: 10px;
+  bottom: 2rem;
+  gap: 1.7rem;
+  left: 1rem;
 }
 
 .theme-sections div{
   color: #fcfefc;
-  font-size: 12px;
+  font-size: 1.2rem;
 }
