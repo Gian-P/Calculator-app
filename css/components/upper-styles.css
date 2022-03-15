@@ -11,24 +11,52 @@
 }
 
 .theme-toogle{
-  width: 7.5rem;
-  height: 2.5rem;
-  border-radius: 3rem;
-  background-color: var(--theme-BC);
-  align-self: flex-end;
-  position: relative;
-  top: 0.4rem;
-}
-
-.theme-sections{
   display: flex;
+  width: 7em;
+  height: 2.5rem;
   position: relative;
-  bottom: 2rem;
-  gap: 1.7rem;
-  left: 1rem;
+  border-radius: 30px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  background-color: #252d44;
+  align-self: end;
+  top: 4px;
 }
-
-.theme-sections div{
+.theme-sections{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  bottom: 13px;
+  gap: 5px;
+}
+span{
+  height: 3em;
+  font-family: "Spartan", sans-serif;
   color: #fcfefc;
   font-size: 1.2rem;
+  display: block;
+  padding: 0.5rem;
+  font-family: "Spartan", sans-serif;
 }
+
+.theme-toogle-ball{
+  background-color: var(--theme-ball);
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.5em;
+  border-radius: 100%;
+  align-self: center;
+}
+
