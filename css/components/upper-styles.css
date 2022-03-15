@@ -1,0 +1,35 @@
+.label{
+  color: var(--white-color);
+  font-size: 3rem;
+}
+
+.theme{
+  color: var(--white-color);
+  font-size: 1.2rem;
+  align-self: flex-end;
+  padding-left: 97px;
+}
+
+.theme-toogle{
+  background-color: red;
+  width: 75px;
+  height: 25px;
+  border-radius: 30px;
+  background-color: var(--theme-BC);
+  align-self: flex-end;
+  position: relative;
+  top: 4px;
+}
+
+.theme-sections{
+  display: flex;
+  position: relative;
+  bottom: 20px;
+  gap: 17px;
+  left: 10px;
+}
+
+.theme-sections div{
+  color: #fcfefc;
+  font-size: 12px;
+}

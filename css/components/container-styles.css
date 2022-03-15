@@ -1,0 +1,38 @@
+.container{
+  min-height: 668px;
+  max-width: 500px;
+  padding-top: 1.1rem;
+  margin-left: 25px;
+  margin-right: 23.5px;
+  margin: auto;
+}
+
+.upper-container{
+  min-height: 172px;
+}
+
+.first-upper-container{
+  display: flex;
+  padding: 2rem 0px 0px 0px;
+  justify-content: space-between;
+}
+
+.second-upper-container{
+  margin-top: 38px;
+  min-height: 90px;
+  background-color: var(--Display-Area-Color);
+  border-radius: 10px;
+}
+
+.bottom-container{
+  margin-top: 23px;
+  min-height: 420px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  padding: 23.5px 25px 27px 25px;
+  column-gap: 14px;
+  row-gap: 20px;
+  background-color: var(--interactive-area-BC);
+  border-radius: 15px;
+}
+

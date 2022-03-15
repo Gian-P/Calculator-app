@@ -1,0 +1,10 @@
+html{
+  font-size: 62.5%;
+}
+
+body{
+  background-color: var(--Page-BC);
+  font-family: var(--ff-primary);
+}
+
+
