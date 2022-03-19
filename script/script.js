@@ -92,14 +92,22 @@ function ExecuteOperationByEqual(textContent){
 }
 
 function CalculateResult(textContent){
+
+  let OperationFunctions = {
+    '+': parseFloat(TopAreaValue) + parseFloat(BottomAreaValue),
+    '-': parseFloat(TopAreaValue) - parseFloat(BottomAreaValue),
+    'x': parseFloat(TopAreaValue) * parseFloat(BottomAreaValue),
+    '/': parseFloat(TopAreaValue) / parseFloat(BottomAreaValue)
+  }
+  /*
   let OperationFunctions = {
     '+': parseInt(TopAreaValue) + parseInt(BottomAreaValue),
     '-': parseInt(TopAreaValue) - parseInt(BottomAreaValue),
     'x': parseInt(TopAreaValue) * parseInt(BottomAreaValue),
     '/': parseInt(TopAreaValue) / parseInt(BottomAreaValue)
-  }
+  }*/
 
-  if(Object.is(NaN, OperationFunctions[textContent]) === false && OperationFunctions[textContent] !== Infinity) return OperationFunctions[textContent];
+  if(Object.is(NaN, OperationFunctions[textContent]) === false && OperationFunctions[textContent] !== Infinity) return (OperationFunctions[textContent]).toFixed(2);
   return null;
 }
 
