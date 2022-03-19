@@ -60,3 +60,25 @@ span{
   align-self: center;
 }
 
+.DisplayTopArea{
+  height: 30px;
+  width: 100px;
+  margin-bottom: 10px;
+  text-align: end;
+  justify-self: end;
+  width: 100%;
+  padding-right: 10px;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.DisplayBottomArea{
+  height: 50px;
+  width: 100%;
+  text-align: end;
+  font-size: 4rem;
+  color: #fff;
+  margin-bottom: 10px;
+  padding-right: 25px;
+}
+
