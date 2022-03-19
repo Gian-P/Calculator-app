@@ -44,39 +44,61 @@ function PrintNumber(e){
 
   if((isNaN(textContent)) && textContent !== ".") return;
 
-  if(textContent === "." && DisplayBottomArea.textContent.includes(".")){
-    return;
-  }
+  if(textContent === "." && DisplayBottomArea.textContent.includes(".")) return;
 
-  DisplayBottomArea.textContent = DisplayBottomArea.textContent + textContent;
+  DisplayBottomArea.textContent === "0" ? DisplayBottomArea.textContent = textContent : DisplayBottomArea.textContent = DisplayBottomArea.textContent + textContent;
+
   BottomAreaValue = DisplayBottomArea.textContent;
 }
 
 // It executes the corresponding action in regards to the operators bottoms
 function CallOperatorFunction(e){
-  if(TopAreaValue !== null && CurrentOperator !== null && BottomAreaValue !== null) ExecuteOperation(e);
-  if(TopAreaValue === null && CurrentOperator === null && BottomAreaValue !== null) FillDisplayArea(e);
-  if(TopAreaValue !== null && CurrentOperator !== null && BottomAreaValue === null) ChangeOperator(e);
+  let textContent = '';
+  (e.type === "click") ? textContent = e.target.textContent : textContent = e.key;
+  if(TopAreaValue !== null && CurrentOperator !== null && BottomAreaValue !== null) ExecuteOperationByOperator(textContent);
+  else if(TopAreaValue === null && CurrentOperator === null && BottomAreaValue !== null) FillDisplayArea(textContent);
+  else if(TopAreaValue !== null && CurrentOperator !== null && BottomAreaValue === null) ChangeOperator(textContent);
 }
 
-// It executes the current operation in queue
-function ExecuteOperation(){
-
+// It executes the current operation in queue and fills the display area and 
+// its corresponding variablesand also resets the ones that need to be reset.
+function ExecuteOperationByOperator(textContent){
+  let result = CalculateResult(CurrentOperator);
+  DisplayTopArea.textContent = result + textContent;
+  TopAreaValue = result;
+  CurrentOperator = textContent;
+  DisplayBottomArea.textContent = 0;
+  BottomAreaValue = null;
 }
 
 // It fills the top part with the corresponding operator and restarts the bottom part.
-function FillDisplayArea(e){
-  /*
-  DisplayTopArea.textContent = DisplayBottomArea.textContent + ;
-  TopAreaValue = DisplayTopArea.textContent;*/
+function FillDisplayArea(textContent){
+  DisplayTopArea.textContent = BottomAreaValue + textContent;
+  TopAreaValue = BottomAreaValue;
+  CurrentOperator = textContent;
+  DisplayBottomArea.textContent = 0;
+  BottomAreaValue = null;
 }
 
 // It changes the current operation being displayed on screen.
-function ChangeOperator(){
-
+function ChangeOperator(textContent){
+  DisplayTopArea.textContent = DisplayTopArea.textContent.replace(CurrentOperator,textContent)
+  CurrentOperator = textContent;
 }
 
+function ExecuteOperationByEqual(textContent){
+  let result = OperationFunctions.textContent;
+}
 
+function CalculateResult(textContent){
+  let OperationFunctions = {
+    '+': parseInt(TopAreaValue) + parseInt(BottomAreaValue),
+    '-': parseInt(TopAreaValue) - parseInt(BottomAreaValue),
+    'x': parseInt(TopAreaValue) * parseInt(BottomAreaValue),
+    '/': parseInt(TopAreaValue) / parseInt(BottomAreaValue)
+  }
+  return OperationFunctions[textContent];
+}
 
 root = document.documentElement;
 root.className = "theme-1";
