@@ -64,6 +64,7 @@ function CallOperatorFunction(e){
 // its corresponding variablesand also resets the ones that need to be reset.
 function ExecuteOperationByOperator(textContent){
   let result = CalculateResult(CurrentOperator);
+  if (result === null) return; 
   DisplayTopArea.textContent = result + textContent;
   TopAreaValue = result;
   CurrentOperator = textContent;
@@ -97,7 +98,9 @@ function CalculateResult(textContent){
     'x': parseInt(TopAreaValue) * parseInt(BottomAreaValue),
     '/': parseInt(TopAreaValue) / parseInt(BottomAreaValue)
   }
-  return OperationFunctions[textContent];
+
+  if(Object.is(NaN, OperationFunctions[textContent]) === false && OperationFunctions[textContent] !== Infinity) return OperationFunctions[textContent];
+  return null;
 }
 
 root = document.documentElement;
