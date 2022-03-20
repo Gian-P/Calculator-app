@@ -1,25 +1,22 @@
 /*### Theme 1*/
 
-/*#3b4664 -> color de fondo de la pagina.*/
-/*#181F32 -> color del display area*/
-/*#FDFBFC -> color blanco de la pagina*/
-/*el theme area color de lo que envuelve la cosa roja #252C46*/
-
-/*#D33D31 -> color del circulo rojo dentro del theme area*/
-
 :root.theme-1{
 
   --Page-BC: #3b4664;
   --Display-Area-Color: #181F32;
   --white-color: #fcfefc;
+  --Second-white-color: #fcfefc;
   --theme-BC: #252C46;
   --theme-ball: #D33D31;
   --interactive-area-BC: #252D44;
   --NOB-BC-color: #EAE3DB;
   --NOB-color: #585a64;
+  --Shadow-color: #a99c97;
   --DRB-BC-color:#647299;
   --EB-BC-color: #d13f30;
-  /*#fff;*/
+  --Numeric-ButtonShadow:#a99c97;
+  --DRButton-Shadow: #4e5a81;
+  --Equal-Button-Shadow: #902418;
 
   --fs-100: 2rem;
   --ff-primary: 'Spartan', sans-serif;
@@ -28,41 +25,21 @@
 /*### Theme 2*/
 
 :root.theme-2{
-
-  /*Backgrounds*/
-
-  /*Main Background*/
-  --Light-gray: hsl(0, 0%, 90%);
-
-  /*(toggle background, keypad background)*/
-  --Grayish-red: hsl(0, 5%, 81%);
-
-  /*(screen background)*/
-  --Very-light-gray: hsl(0, 0%, 93%);
-
-  /*keys*/
-
-  /*(key background)*/
-  --Dark-moderate-cyan: hsl(185, 42%, 37%);
-
-  /*(key shadow)*/
-  --Very-dark-cyan: hsl(185, 58%, 25%);
-
-  /*(key background, toggle)*/
-  --Orange: hsl(25, 98%, 40%);
-
-  /*(key shadow)*/
-  --Dark-orange: hsl(25, 99%, 27%);
-
-  /*(key background)*/
-  --Light-grayish-yellow: hsl(45, 7%, 89%);
-  /*(key shadow)*/
-  --Dark-grayish-orange: hsl(35, 11%, 61%);
-
-  /*Text*/
-
-  --Very-dark-grayish-yellow: hsl(60, 10%, 19%);
-  --White: hsl(0, 0, 100%);
+  --Page-BC: #E6E6E6;
+  --Display-Area-Color: #EEEEEE;
+  --white-color: #35352D;
+  --Second-white-color: #fcfefc;
+  --theme-BC: #D3CDCD;
+  --theme-ball: #C55601;
+  --interactive-area-BC: #D3CDCC;
+  --NOB-BC-color: #E5E4E0;
+  --NOB-color: #3D3C37;
+  --Shadow-color: #a99c97;
+  --DRB-BC-color:#388187;
+  --EB-BC-color: #C85401; 
+  --Numeric-ButtonShadow:#a99c97;
+  --DRButton-Shadow: #1C5F67;
+  --Equal-Button-Shadow: #8A3A00;
 
   --fs-100: 2rem;
   --ff-primary: 'Spartan', sans-serif;
@@ -71,42 +48,21 @@
 /*### Theme 3*/
 
 :root.theme-3{
-
-  /*Backgrounds*/
-
-  /*Main Background*/
-  --Very-dark-violet: hsl(268, 75%, 9%);
-
-  /*(toggle background, keypad background)*/
-  --Very-dark-violet: hsl(268, 71%, 12%);
-
-  /*(screen background)*/
-  --Very-dark-desaturated-blue: hsl(224, 36%, 15%);
-
-  /*keys*/
-
-  /*(key background)*/
-  --Dark-violet: hsl(281, 89%, 26%);
-
-  /*(key shadow)*/
-  --Vivid-magenta: hsl(285, 91%, 52%);
-
-  /*(key background, toggle)*/
-  --Pure-cyan: hsl(176, 100%, 44%);
-  /*(key shadow)*/
-  --Soft-cyan: hsl(177, 92%, 70%);
-
-  /*(key background)*/
-  --Very-dark-violet: hsl(268, 47%, 21%);
-  /*(key shadow)*/
-  --Dark-magenta : hsl(290, 70%, 36%);
-
-  /*Text*/
-
-  --Light-yellow: hsl(52, 100%, 62%);
-  --Very-dark-blue: hsl(198, 20%, 13%);
-  /*(text)*/
-  --White: hsl(0, 0, 100%);
+  --Page-BC: #17062A;
+  --Display-Area-Color: #1E0836;
+  --white-color: #FFE440;
+  --Second-white-color: #fcfefc;
+  --theme-BC: #1E0836;
+  --theme-ball: #0BD9D6;
+  --interactive-area-BC: #1E0936;
+  --NOB-BC-color: #331B4D;
+  --NOB-color: #FEE54C;
+  --Shadow-color: #851D9C;
+  --DRB-BC-color:#56077C;
+  --EB-BC-color: #00DECF; 
+  --Numeric-ButtonShadow:#7F2196;
+  --DRButton-Shadow: #B61BE8;
+  --Equal-Button-Shadow: #78F1EF;
 
   --fs-100: 2rem;
   --ff-primary: 'Spartan', sans-serif;

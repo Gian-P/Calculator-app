@@ -39,19 +39,18 @@ theme_3.addEventListener("click",ChangeTheme);
 
 document.addEventListener("keydown",CallCorrespondingFunction);
 
-
 /*----------------------Calculator functions----------------------*/
 
 // Calls the function corresponding to the bottom that was selected if the character maches any of them.
 function CallCorrespondingFunction(e){
   if(!(isNaN(e.key)) || e.key === ".") return PrintNumber(e);
-
+  
   OperatorArray.forEach(element => {
     if(e.key === element) CallOperatorFunction(e);
   })
 
   if(e.key === "Backspace") Delete();
-
+  
   if(e.key === "Escape") Reset();
 
   if(e.key === "Enter") ExecuteOperationByEqual(e);
@@ -71,7 +70,7 @@ function PrintNumber(e){
   BottomAreaValue = DisplayBottomArea.textContent;
 }
 
-// It executes the corresponding action in regards to the operators bottoms
+// It executes the corresponding action in regards to the operators bottoms.
 function CallOperatorFunction(e){
   let textContent = '';
   (e.type === "click") ? textContent = e.target.textContent : textContent = e.key;
@@ -81,7 +80,7 @@ function CallOperatorFunction(e){
 }
 
 // It executes the current operation in queue and fills the display area and 
-// its corresponding variablesand also resets the ones that need to be reset.
+// its corresponding variables and also resets the ones that need to be reset.
 function ExecuteOperationByOperator(textContent){
   let result = CalculateResult(CurrentOperator);
   if (result === null) return; 
@@ -108,9 +107,7 @@ function ChangeOperator(textContent){
 }
 
 function Delete(e){
-  //let textContent = '';
   let length = DisplayBottomArea.textContent.length;
-  //(e.type === "click") ? textContent = e.target.textContent : textContent = e.key;
 
   DisplayBottomArea.textContent = DisplayBottomArea.textContent.slice(0,length-1);
   if(DisplayBottomArea.textContent.length === 0){
@@ -129,6 +126,7 @@ function Reset(){
 }
 
 function ExecuteOperationByEqual(e){
+  if(TopAreaValue === null && CurrentOperator === null && BottomAreaValue === null) return;
   let result = CalculateResult(CurrentOperator);
   if(result === null) return;
   DisplayTopArea.textContent = "";
@@ -151,7 +149,7 @@ function CalculateResult(textContent){
   return null;
 }
 
-/*----------------------Toogle functions----------------------*/
+/*----------------------Toogle function----------------------*/
 
 function ChangeTheme(e){
   let textContent = '';
@@ -159,18 +157,20 @@ function ChangeTheme(e){
 
   if(textContent === "1"){
     document.getElementById("circle-theme").style.justifyContent = "flex-start";
-    console.log('hola');
-    //root.className = "theme-1"
+    root.className = "theme-1"
+    document.getElementById("IdEqual").style.color = "#fcfefc";
 
   }
   else if(textContent === "2"){
     document.getElementById("circle-theme").style.justifyContent = "center";
-    //root.className = "theme-2"
+    root.className = "theme-2"
+    document.getElementById("IdEqual").style.color = "#fcfefc";
    
   }
   else{
     document.getElementById("circle-theme").style.justifyContent = "end";
-    //root.className = "theme-3"
+    root.className = "theme-3"
+    document.getElementById("IdEqual").style.color = "#10736E";
   }
 }
 

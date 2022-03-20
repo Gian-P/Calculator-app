@@ -2,28 +2,27 @@
   background-color: var(--NOB-BC-color);
   border: none;
   color:  var(--NOB-color);
-  box-shadow: 0 4.5px 0em #a99c97;
+  box-shadow: 0 4.5px 0em var(--Numeric-ButtonShadow);
   border-radius: 5px;
   font-size: 2.5rem;
   text-align: center;
   cursor: pointer;
 }
 
-
 .bottom-container :nth-child(4){
   background-color: var(--DRB-BC-color);
-  color: var(--white-color);
+  color: var(--Second-white-color);
   font-size: 1.8rem;
-  box-shadow: 0 0.19em 0em #4e5a81;
+  box-shadow: 0 0.19em 0em var(--DRButton-Shadow);
   padding: 0.5rem;
 }
 
 .bottom-container :nth-child(17){
   grid-column: 1/3;
   background-color: var(--DRB-BC-color);
-  color: var(--white-color);
+  color: var(--Second-white-color);
   font-size: 1.8rem;
-  box-shadow: 0 0.19em 0em #4e5a81;
+  box-shadow: 0 0.19em 0em var(--DRButton-Shadow);
   padding: 0.5rem;
 }
 
@@ -31,8 +30,8 @@
 .bottom-container :nth-child(18){
   grid-column: 3/5;
   background-color: var(--EB-BC-color);
-  box-shadow: 0 0.19em 0em #902418;
-  color: var(--white-color);
+  box-shadow: 0 0.19em 0em var(--Equal-Button-Shadow);
+  color: var(--Second-white-color);
   font-size: 1.8rem;
 }
 
