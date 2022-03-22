@@ -10,6 +10,7 @@
 .Footer p{
   color: var(--white-color);
 }
+
 .Git-icon{
   transition: transform 0.3s ease-in-out;
   max-width: none;
