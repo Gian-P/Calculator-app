@@ -4,4 +4,5 @@
 @import './components/bottom-styles.css';
 @import './components/container-styles.css';
 @import './components/upper-styles.css';
+@import './components/footer.css';
 @import './base/media-queries.css';
