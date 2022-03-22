@@ -46,7 +46,7 @@ With this challenge I was able to practice my HTML and CSS/Flexbox Mobile first 
 
 - Github repository - [Gian-P](https://github.com/Gian-P)
 
-### Github pages
+## Github pages
 
 https://Gian-P.github.io/Calculator-app/
 
